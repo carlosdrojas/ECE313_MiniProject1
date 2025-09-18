@@ -9,5 +9,9 @@ disp(Fs);
 
 y = resample(y, 16000, Fs);
 
+y = mean(y, 2)
+
+y = y(1:448000);
+
 sound(y, 16000);
 
