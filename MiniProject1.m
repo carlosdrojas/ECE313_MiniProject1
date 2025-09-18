@@ -5,3 +5,9 @@ eps = .1;
 p = 0.4;
 
 [y, Fs] = audioread('headlines.wav');
+disp(Fs);
+
+y = resample(y, 16000, Fs);
+
+sound(y, 16000);
+
